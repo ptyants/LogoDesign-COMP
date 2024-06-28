@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const visitCountRef = database.ref('visitCount');
 
         visitCountRef.transaction(currentCount => {
-            //console.log('Current Count:', currentCount);
             if (currentCount === null) {
                 return 1; // Initial count
             }
